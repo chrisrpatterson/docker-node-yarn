@@ -1,7 +1,7 @@
 FROM node:boron
 MAINTAINER Hugo Dias <mail@hugodias.me>
 
-ENV RUNTIME_PACKAGES yarn=0.20.3-1 \
+ENV RUNTIME_PACKAGES yarn=0.21.3-1 \
     rsync
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
