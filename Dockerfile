@@ -1,11 +1,7 @@
-FROM node:boron
+FROM node:latest
 MAINTAINER Hugo Dias <mail@hugodias.me>
 
-ENV RUNTIME_PACKAGES yarn=0.27.5-1 \
-    rsync
-
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-RUN echo "deb http://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+ENV RUNTIME_PACKAGES rsync
 
 RUN apt-get update -y && apt-get install --fix-missing && \
     DEBIAN_FRONTEND=noninteractive \
