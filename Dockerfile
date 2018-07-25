@@ -1,3 +1,4 @@
+# Comment
 FROM node:latest
 MAINTAINER Hugo Dias <mail@hugodias.me>
 
